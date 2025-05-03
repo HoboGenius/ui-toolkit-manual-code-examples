@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace UIToolkitExamples
+namespace UIToolkitExamplesAlternative
 {
     public class TexturePreviewElement : BindableElement, INotifyValueChanged<Object>
     {
@@ -33,7 +33,7 @@ namespace UIToolkitExamples
 
             styleSheets.Add(Resources.Load<StyleSheet>("texture_preview_element"));
         }
-        
+
         void OnObjectFieldValueChanged(ChangeEvent<Object> evt)
         {
             value = evt.newValue;

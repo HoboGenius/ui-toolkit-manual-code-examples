@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections.Generic;
 
-public class TransitionExample : EditorWindow
+public class TransitionExampleAlt : EditorWindow
 {
     [SerializeField]
     VisualTreeAsset m_VisualTreeAsset;
@@ -63,7 +63,7 @@ public class TransitionExample : EditorWindow
         label.style.rotate = hover ? new(Angle.Degrees(10)) : defaultRotate;
         label.style.scale = hover ? new Vector2(1.1f, 1) : defaultScale;
     }
-    
+
     // Unregister all event callbacks.
     void OnDisable()
     {

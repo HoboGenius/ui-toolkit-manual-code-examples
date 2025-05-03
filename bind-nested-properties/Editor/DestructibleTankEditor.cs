@@ -1,15 +1,17 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
-
-[CustomEditor(typeof(DestructibleTankScript))]
-public class DestructibleTankEditor : Editor
+namespace MyUILibraryAlternative
 {
-    [SerializeField]
-    VisualTreeAsset visualTreeAsset;
-
-    public override VisualElement CreateInspectorGUI()
+    [CustomEditor(typeof(DestructibleTankScript))]
+    public class DestructibleTankEditor : Editor
     {
-        return visualTreeAsset.CloneTree();
+        [SerializeField]
+        VisualTreeAsset visualTreeAsset;
+
+        public override VisualElement CreateInspectorGUI()
+        {
+            return visualTreeAsset.CloneTree();
+        }
     }
 }

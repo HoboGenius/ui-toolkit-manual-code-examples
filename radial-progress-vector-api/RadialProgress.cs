@@ -2,7 +2,7 @@ using Unity.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace MyUILibrary
+namespace MyUILibraryAlternative
 {
 
     // An element that displays progress inside a partially filled circle
@@ -123,4 +123,4 @@ namespace MyUILibrary
             painter.Stroke();
         }
     }
-}    
+}
