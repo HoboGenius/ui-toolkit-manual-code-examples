@@ -25,7 +25,7 @@
             const string windowBTitle = "Drag and Drop B";
 
             // This method opens two DragAndDropWindows when a user selects the specified menu item.
-            [MenuItem("Window/UI Toolkit/Drag And Drop (Editor)")]
+            [MenuItem("Window/UI Toolkit Examples/Drag And Drop (Editor)")]
             public static void OpenDragAndDropWindows()
             {
                 // Create the windows.

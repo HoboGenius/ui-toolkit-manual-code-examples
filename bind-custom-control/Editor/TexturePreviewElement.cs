@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Object = UnityEngine.Object;
 
-namespace UIToolkitExamplesAlternative
+namespace UIToolkitExamples
 {
-    public class TexturePreviewElement : BindableElement, INotifyValueChanged<Object>
+    [UxmlElementAttribute("TexturePreviewElementBCC, TexturePreviewElement")]
+    public class TexturePreviewElementBCC : BindableElement, INotifyValueChanged<Object>
     {
         public new class UxmlTraits : BindableElement.UxmlTraits { }
-        public new class UxmlFactory : UxmlFactory<TexturePreviewElement, UxmlTraits> { }
+//        public new class UxmlElementFactory : UxmlFactory<TexturePreviewElementBCC, UxmlTraits> { }
 
         public static readonly string ussClassName = "texture-preview-element";
 
@@ -17,7 +18,7 @@ namespace UIToolkitExamplesAlternative
         ObjectField m_ObjectField;
         Texture2D m_Value;
 
-        public TexturePreviewElement()
+        public TexturePreviewElementBCC()
         {
             AddToClassList(ussClassName);
 

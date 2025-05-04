@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class PlanetsTreeView : PlanetsWindow
 {
-    [MenuItem("Planets/Standard Tree")]
+    [MenuItem("Window/UI Toolkit Examples/Planets/Standard Tree")]
     static void Summon()
     {
         GetWindow<PlanetsTreeView>("Standard Planet Tree");

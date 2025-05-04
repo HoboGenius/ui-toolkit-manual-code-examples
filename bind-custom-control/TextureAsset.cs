@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace UIToolkitExamples
 {
-    [CreateAssetMenu(menuName = "UIToolkitExamples/TextureAsset")]
+    [CreateAssetMenu(menuName = "UI Toolkit Examples/Texture Asset")]
     public class TextureAsset : ScriptableObject
     {
         public Texture2D texture;

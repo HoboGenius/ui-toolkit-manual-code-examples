@@ -10,7 +10,7 @@ public class SortElements : MonoBehaviour
     VisualElement m_BaseContainer;
 
     MovingNameTag[] m_MovingNameTags;
-    
+
     void Start()
     {
         m_MovingNameTags = FindObjectsByType<MovingNameTag>(FindObjectsSortMode.None);
@@ -25,7 +25,7 @@ public class SortElements : MonoBehaviour
     static int CompareOrder(VisualElement x, VisualElement y)
     {
         // Compare the scale of the visual elements in the base container, which is
-        // determined by the distance of the object it follows in the MovingNameTag component
+        // determined by the distance of the object it follows in the PlayerNamePlate component
         return x.style.scale.value.value.x.CompareTo(y.style.scale.value.value.x);
     }
 }

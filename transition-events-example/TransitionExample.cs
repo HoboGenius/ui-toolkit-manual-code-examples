@@ -22,7 +22,7 @@ public class TransitionExample : EditorWindow
     private static readonly string TimeLabelName = "timeLabel";
     private static readonly string TimeBelowThresholdText = "Almost instantaneous.";
 
-    [MenuItem("Window/UI Toolkit/TransitionExample")]
+    [MenuItem("Window/UI Toolkit Examples/TransitionExample")]
     public static void ShowExample()
     {
         TransitionExample wnd = GetWindow<TransitionExample>();

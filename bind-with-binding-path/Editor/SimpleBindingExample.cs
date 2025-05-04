@@ -9,7 +9,7 @@ namespace UIToolkitExamples
     {
         TextField m_ObjectNameBinding;
 
-        [MenuItem("Window/UIToolkitExamples/Simple Binding Example")]
+        [MenuItem("Window/UI Toolkit Examples/Simple Binding Example")]
         public static void ShowDefaultWindow()
         {
             var wnd = GetWindow<SimpleBindingExample>();

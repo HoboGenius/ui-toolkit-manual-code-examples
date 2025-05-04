@@ -10,7 +10,7 @@ namespace UIToolkitExamples
         [SerializeField]
         VisualTreeAsset visualTree;
 
-        [MenuItem("Window/UIToolkitExamples/Simple Binding Example UXML")]
+        [MenuItem("Window/UI Toolkit Examples/Simple Binding Example UXML")]
         public static void ShowDefaultWindow()
         {
             var wnd = GetWindow<SimpleBindingExampleUXML>();

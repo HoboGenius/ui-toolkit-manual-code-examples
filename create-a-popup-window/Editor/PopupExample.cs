@@ -1,11 +1,12 @@
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.UIElements;
 using PopupWindow = UnityEditor.PopupWindow;
 
 public class PopupExample : EditorWindow
 {
     // Add menu item
-    [MenuItem("Example/Popup Example")]
+    [MenuItem("Window/UI Toolkit Examples/Popup Example")]
     static void Init()
     {
         EditorWindow window = EditorWindow.CreateInstance<PopupExample>();
@@ -14,7 +15,10 @@ public class PopupExample : EditorWindow
 
     private void CreateGUI()
     {
-        var visualTreeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/PopupExample.uxml");
+        //var visualTreeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/PopupExample.uxml");
+        // Load page from a resouce folder
+        var visualTreeAsset = Resources.Load<VisualTreeAsset>("PopupExample");
+
         visualTreeAsset.CloneTree(rootVisualElement);
 
         var button = rootVisualElement.Q<Button>();

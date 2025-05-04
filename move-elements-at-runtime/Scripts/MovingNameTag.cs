@@ -22,15 +22,15 @@ public class MovingNameTag : MonoBehaviour
     VisualElement m_Root;
     VisualElement m_BaseContainer;
     VisualElement m_NpcNameTag;
-    
+
     Camera m_MainCamera;
-    
+
     void Awake()
     {
         m_MainCamera = Camera.main;
-        
+
         m_BaseContainer = m_BaseContainerDocument.rootVisualElement.Q<VisualElement>("BaseContainer");
-        
+
         m_NpcNameTag = m_NameTagTemplate.Instantiate();
 
         // Set DynamicTransform hint on the moving element to optimize performance.
@@ -47,18 +47,18 @@ public class MovingNameTag : MonoBehaviour
     void SetNameTagPositionAndScale()
     {
         var cameraSpaceLocation = GetCameraSpaceLocation(m_UITransform);
-        
+
         // Use style.translate to set the position of the name tag.
         m_NpcNameTag.style.translate = new Translate(cameraSpaceLocation.x, cameraSpaceLocation.y);
 
         // Get distance of NPC from camera.
         var distance = Vector3.Distance(m_UITransform.position, m_MainCamera.transform.position);
-        
+
         // Calculate 1/distance so the name tag get smaller as the distance gets bigger.
         var scale = 1 / distance * m_ScaleMultiplier;
 
         m_NpcNameTag.style.scale = new Scale(new Vector2(scale, scale));
-        
+
         // Display name tag based on whether it's in front of the camera and within culling range.
         if (cameraSpaceLocation.z < 0 || distance > m_DistanceCullingRange)
         {
@@ -76,7 +76,7 @@ public class MovingNameTag : MonoBehaviour
         var containerSize = m_BaseContainer.layout.size;
         var screenPoint = m_MainCamera.WorldToViewportPoint(objectTransform.position);
         var output = new Vector3(screenPoint.x * containerSize.x, (1 - screenPoint.y) * containerSize.y, screenPoint.z);
-        
+
         return output;
     }
 }

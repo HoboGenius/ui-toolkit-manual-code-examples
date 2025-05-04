@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class PlanetsMultiColumnTreeView : PlanetsWindow
 {
-    [MenuItem("Planets/Multicolumn Tree")]
+    [MenuItem("Window/UI Toolkit Examples/Planets/Multicolumn Tree")]
     static void Summon()
     {
         GetWindow<PlanetsMultiColumnTreeView>("Multicolumn Planet Tree");

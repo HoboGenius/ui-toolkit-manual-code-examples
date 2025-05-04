@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class PlanetsListView : PlanetsWindow
 {
-    [MenuItem("Planets/Standard List")]
+    [MenuItem("Window/UI Toolkit Examples/Planets/Standard List")]
     static void Summon()
     {
         GetWindow<PlanetsListView>("Standard Planet List");

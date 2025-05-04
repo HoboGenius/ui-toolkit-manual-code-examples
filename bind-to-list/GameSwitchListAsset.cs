@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UIToolkitExamples
 {
-    [CreateAssetMenu(menuName = "UIToolkitExamples/GameSwitchList")]
+    [CreateAssetMenu(menuName = "UI Toolkit Examples/GameSwitchList")]
     public class GameSwitchListAsset : ScriptableObject
     {
         public List<GameSwitch> switches;

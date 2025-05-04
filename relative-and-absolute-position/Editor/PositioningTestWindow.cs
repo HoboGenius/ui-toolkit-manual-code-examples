@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class PositioningTestWindow : EditorWindow
 {
-    [MenuItem("Window/UI Toolkit/Positioning Test Window")]
+    [MenuItem("Window/UI Toolkit Examples/Positioning Test Window")]
     public static void ShowExample()
     {
         var wnd = GetWindow<PositioningTestWindow>();

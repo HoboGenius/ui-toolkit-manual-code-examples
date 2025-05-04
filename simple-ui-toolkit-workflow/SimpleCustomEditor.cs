@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class SimpleCustomEditor : EditorWindow
 {
-    [MenuItem("Window/UI Toolkit/MyCustomEditor")]
+    [MenuItem("Window/UI Toolkit Examples/MyCustomEditor")]
     public static void ShowExample()
     {
         SimpleCustomEditor wnd = GetWindow<SimpleCustomEditor>();

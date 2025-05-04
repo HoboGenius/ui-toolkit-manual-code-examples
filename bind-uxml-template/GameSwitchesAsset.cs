@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "UIToolkitExamples/GameSwitches")]
+[CreateAssetMenu(menuName = "UI Toolkit Examples/GameSwitches")]
 public class GameSwitchesAsset : ScriptableObject
 {
     public GameSwitch useLocalServer;

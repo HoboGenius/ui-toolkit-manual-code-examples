@@ -8,7 +8,7 @@ public class TransitionExampleAlt : EditorWindow
     [SerializeField]
     VisualTreeAsset m_VisualTreeAsset;
 
-    [MenuItem("Window/UI Toolkit/TransitionExample")]
+    [MenuItem("Window/UI Toolkit Examples/TransitionExample")]
     public static void ShowExample()
     {
         TransitionExample wnd = GetWindow<TransitionExample>();

@@ -6,7 +6,7 @@ namespace UIToolkitExamples
 {
     public class SimpleBindingExampleInspectorElement : EditorWindow
     {
-        [MenuItem("Window/UIToolkitExamples/Simple Binding Example Inspector Element")]
+        [MenuItem("Window/UI Toolkit Examples/Simple Binding Example Inspector Element")]
         public static void ShowDefaultWindow()
         {
             var wnd = GetWindow<SimpleBindingExampleInspectorElement>();

@@ -19,10 +19,10 @@ public class PopupContentExample : PopupWindowContent
     {
         Debug.Log("Popup opened: " + this);
 
-        var visualTreeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/PopupWindowContent.uxml");
+        var visualTreeAsset = Resources.Load<VisualTreeAsset>("PopupWindowContent");
         visualTreeAsset.CloneTree(editorWindow.rootVisualElement);
     }
-        
+
     public override void OnClose()
     {
         Debug.Log("Popup closed: " + this);

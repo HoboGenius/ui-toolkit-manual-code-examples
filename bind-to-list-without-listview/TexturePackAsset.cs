@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UIToolkitExamples
 {
-    [CreateAssetMenu(menuName = "UIToolkitExamples/TexturePackAsset")]
+    [CreateAssetMenu(menuName = "UI Toolkit Examples/TexturePackAsset")]
     public class TexturePackAsset : ScriptableObject
     {
         public List<Texture2D> textures;

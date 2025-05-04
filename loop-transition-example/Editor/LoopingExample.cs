@@ -6,7 +6,7 @@ public class LoopingExample : EditorWindow
     [SerializeField] private VisualTreeAsset m_VisualTreeAsset = default;
     private Label _yoyoLabel;
     private Label _a2bLabel;
-    [MenuItem("Window/UI Toolkit/Transition Looping Example")]
+    [MenuItem("Window/UI Toolkit Examples/Transition Looping Example")]
     public static void ShowExample()
     {
         var wnd = GetWindow<LoopingExample>();
