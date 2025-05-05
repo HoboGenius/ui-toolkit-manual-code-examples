@@ -9,7 +9,7 @@ namespace Samples.Editor.Controls
         private Toggle activateToggle;
         private Label labelToShow;
         private Button buttonToActivate;
-        [MenuItem("Window/ToggleExample")]
+        [MenuItem("Window/UI Toolkit Examples/ToggleExample")]
         public static void OpenWindow()
         {
             var window = GetWindow<ToggleExample>("Controls: Toggle Sample");
