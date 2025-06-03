@@ -16,7 +16,7 @@ namespace UIToolkitExamples
         TankScript m_Tank;
         public void OnEnable()
         {
-            m_Tank = FindObjectOfType<TankScript>();
+            m_Tank = FindFirstObjectByType<TankScript>();
             if (m_Tank == null)
                 return;
 

@@ -1,4 +1,0 @@
-ExampleElementCustomStyle {
-	--gradient-from: red;
-	--gradient-to: yellow;
-}

@@ -8,7 +8,7 @@ public class MyCustomEditor : EditorWindow
     [SerializeField] private int m_SelectedIndex = -1;
     private VisualElement m_RightPane;
 
-    [MenuItem("Window/UI Toolkit Examples/MyCustomEditor")]
+    [MenuItem("Window/UI Toolkit Examples/My Custom Editor")]
     public static void ShowMyEditor()
     {
         // This method is called when the user selects the menu item in the Editor.

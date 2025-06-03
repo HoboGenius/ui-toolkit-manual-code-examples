@@ -9,13 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e92f7af646b9ed4d87b32fcfa46ac3c, type: 3}
-  m_Name: ExampleTexturePackAsset
+  m_Script: {fileID: 11500000, guid: a9924afb33995224ea7c349dc38719fb, type: 3}
+  m_Name: New Game Switches Asset
   m_EditorClassIdentifier: 
-  textures:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  useLocalServer:
+    name: Use Local Server
+    enabled: 0
+  showDebugMenu:
+    name: Show Debug Menu
+    enabled: 0
+  showFPSCounter:
+    name: Show FPS Counter
+    enabled: 1
