@@ -17,6 +17,7 @@ public class CharacterListController
 
     public void InitializeCharacterList(VisualElement root, VisualTreeAsset listElementTemplate)
     {
+        // Build the list of character data objects
         EnumerateAllCharacters();
 
         // Store a reference to the template for the list entries
@@ -30,6 +31,7 @@ public class CharacterListController
         m_CharNameLabel = root.Q<Label>("character-name");
         m_CharPortrait = root.Q<VisualElement>("character-portrait");
 
+        // Populate the UI list with the data from the characters list
         FillCharacterList();
 
         // Register to get a callback when an item is selected
@@ -38,13 +40,18 @@ public class CharacterListController
 
     void EnumerateAllCharacters()
     {
+        // Build the list
         m_AllCharacters = new List<CharacterData>();
+        // Add the data objects to the list
         m_AllCharacters.AddRange(Resources.LoadAll<CharacterData>("Characters"));
+
+        Debug.Log($"Loaded {m_AllCharacters.Count} characters");
     }
 
     void FillCharacterList()
     {
         // Set up a make item function for a list entry
+        // This is the reused mapping for each of the line items in the list
         m_CharacterList.makeItem = () =>
         {
             // Instantiate the UXML template for the entry
@@ -54,6 +61,8 @@ public class CharacterListController
             var newListEntryLogic = new CharacterListEntryController();
 
             // Assign the controller script to the visual element
+            // this is stored in a special container called userData
+            // https://docs.unity3d.com/ScriptReference/UIElements.VisualElement.html
             newListEntry.userData = newListEntryLogic;
 
             // Initialize the controller script
@@ -62,19 +71,23 @@ public class CharacterListController
             // Return the root of the instantiated visual tree
             return newListEntry;
         };
+        Debug.Log($"Created make item template");
+
 
         // Set up bind function for a specific list entry
         m_CharacterList.bindItem = (item, index) =>
         {
+            Debug.Log($"Binding item {index} - {m_AllCharacters[index].CharacterName}");
             (item.userData as CharacterListEntryController)?.SetCharacterData(m_AllCharacters[index]);
         };
 
-        // Set a fixed item height matching the height of the item provided in makeItem. 
+        // Set a fixed item height matching the height of the item provided in makeItem.
         // For dynamic height, see the virtualizationMethod property.
         m_CharacterList.fixedItemHeight = 45;
 
         // Set the actual item's source list/array
         m_CharacterList.itemsSource = m_AllCharacters;
+        Debug.Log($"Set items source to {m_CharacterList.itemsSource}");
     }
 
     void OnCharacterSelected(IEnumerable<object> selectedItems)

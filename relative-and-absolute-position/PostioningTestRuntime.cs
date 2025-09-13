@@ -7,8 +7,6 @@ public class PostioningTestRuntime : MonoBehaviour
     {
         GetComponent<UIDocument>();
 
-    }   
+    }
 }
-
-        
 
